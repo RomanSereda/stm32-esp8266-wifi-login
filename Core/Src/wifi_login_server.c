@@ -9,7 +9,7 @@
 #include "flash_write_read_data.h"
 
 #define FLESH_SECTOR_ADDRESS 0x0800C100
-#define WRITED_FLASH_FLAG 10112
+#define WRITED_FLASH_FLAG 10113
 
 struct ssid_pswd_data_t{
 	char ssid[32];
@@ -105,7 +105,7 @@ static bool ap_mode(char* ap_ip)
 		return false;
 	}
 	if(!command("AT+CWDHCP=0,1\r\n", OK_EXPR)) return false;
-	if(!command("AT+CWSAP_CUR=\"ChargerWebView\",\"12345678\",8,4\r\n", OK_EXPR)) return false;
+	if(!command("AT+CWSAP_CUR=\"IoTWebService\",\"12345678\",8,4\r\n", OK_EXPR)) return false;
 	if(!command("AT+CIPMODE=0\r\n", OK_EXPR)) return false;
 	sprintf(data, "AT+CIPAP_CUR=\"%s\"\r\n", ap_ip);
 	if(!command(data, OK_EXPR)) return false;
