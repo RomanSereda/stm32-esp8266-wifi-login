@@ -7,7 +7,3 @@
 #### STA Mode
   default IP for me in router network after connected: 192.168.0.112
   
-  
-<img src="https://github.com/RomanSereda/stm32-esp8266-wifi-login/blob/master/Untitled.png" width="400">
-
-
